@@ -1,0 +1,44 @@
+{
+  "name": "docpad-plugin-grunt",
+  "version": "2.0.0",
+  "description": "Run Grunt tasks from DocPad.",
+  "license": "MIT",
+  "homepage": "http://github.com/robloach/docpad-plugin-grunt",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "grunt"
+  ],
+  "author": "Rob Loach (http://robloach.net)",
+  "maintainers": [
+    "Rob Loach (http://robloach.net)"
+  ],
+  "contributors": [
+    "Rob Loach (http://robloach.net)"
+  ],
+  "bugs": {
+    "url": "http://github.com/robloach/docpad-plugin-grunt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobLoach/docpad-plugin-grunt.git"
+  },
+  "engines": {
+    "node": ">=0.10",
+    "docpad": "6.x"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.10",
+    "safeps": "~2.2.8"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2",
+    "docpad": ">=6.37 <7",
+    "joe": "*"
+  },
+  "main": "./out/grunt.plugin.js",
+  "scripts": {
+    "test": "node ./out/grunt.test.js"
+  }
+}
