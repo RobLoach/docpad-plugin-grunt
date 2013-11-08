@@ -25,12 +25,12 @@ to your [DocPad configuration file](http://docpad.org/docs/config):
       gruntTasks: []
 ```
 
-The following will run the `"min"` and `"uglify"` tasks from Grunt:
+The following will run the `"cssmin"` and `"uglify"` tasks from Grunt:
 
 ```coffeescript
   plugins:
     grunt:
-      gruntTasks: ["min", "uglify"]
+      gruntTasks: ["cssmin", "uglify"]
 ```
 
 
