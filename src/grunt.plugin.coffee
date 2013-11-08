@@ -8,20 +8,9 @@ module.exports = (BasePlugin) ->
     config:
       gruntTasks: []
 
-    # Constructor
-    constructor: ->
-      # Prepare
-      super
-
-      # Require HTML Minifier
-      #@htmlmin = require('html-minifier').minify
-
-      # Chain
-      @
-
     # Write After
     # Run Grunt after DocPad generation
-    writeAfter: (opts,next) ->
+    writeAfter: (opts, next) ->
       # Dependencies
       safeps = require('safeps')
       path = require('path')
@@ -32,11 +21,11 @@ module.exports = (BasePlugin) ->
       rootPath = @docpad.getConfig().rootPath
       gruntPath = path.join(rootPath, 'node_modules', '.bin', 'grunt')
       tasks = [gruntPath]
-      for task in config.gruntTasks
+      for task in config.gruntTasks or []
         tasks.push task
 
       # Execute
-      safeps.spawn(tasks, {cwd:rootPath,output:true}, next)
+      safeps.spawn(tasks, {cwd:rootPath, output:true}, next)
 
       # Chain
       @
