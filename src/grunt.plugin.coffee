@@ -5,10 +5,8 @@ module.exports = (BasePlugin) ->
     # Name
     name: 'grunt'
 
-    # Configuration
     config:
-      gruntOptions:
-        afterWrite: ''
+      gruntTasks: []
 
     # Constructor
     constructor: ->
@@ -20,23 +18,25 @@ module.exports = (BasePlugin) ->
 
       # Chain
       @
-      
-		# Write After
-		# Run Grunt after DocPad generation
-		writeAfter: (opts,next) ->
-			# Prepare
-			safeps = require('safeps')
-			pathUtil = require('path')
-			docpad = @docpad
-			rootPath = docpad.getConfig().rootPath
-			gruntPath = pathUtil.join(rootPath, 'node_modules', '.bin', 'grunt')
-	
-			# Perform the grunt `min` task
-			# https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
-			command = [gruntPath]
-			
-			# Execute
-			safeps.spawn(command, {cwd:rootPath,output:true}, next)
-	
-			# Chain
-			@
+
+    # Write After
+    # Run Grunt after DocPad generation
+    writeAfter: (opts,next) ->
+      # Dependencies
+      safeps = require('safeps')
+      path = require('path')
+      fs = require('fs')
+
+      # Prepare
+      config = @getConfig()
+      rootPath = @docpad.getConfig().rootPath
+      gruntPath = path.join(rootPath, 'node_modules', '.bin', 'grunt')
+      tasks = [gruntPath]
+      for task in config.gruntTasks
+        tasks.push task
+
+      # Execute
+      safeps.spawn(tasks, {cwd:rootPath,output:true}, next)
+
+      # Chain
+      @

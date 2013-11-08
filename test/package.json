@@ -1,5 +1,9 @@
 {
   "name": "docpad-plugin-grunt-testsite",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-cli": "~0.1.10"
+  }
 }

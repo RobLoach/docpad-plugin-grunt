@@ -1,15 +1,12 @@
 module.exports = (grunt) ->
 
   grunt.initConfig
-    pkg: grunt.file.readJSON("package.json")
-
-    concat:
-      options:
-        banner: banner
+    # Simply copy test.html to test.copy.html
+    copy:
       test:
-        src: "src/files/components/build.js"
-        dest: "src/files/components/build.min.js"
+        src: "out/test.html"
+        dest: "out/test.copy.html"
 
-  grunt.loadNpmTasks "grunt-contrib-concat"
+  grunt.loadNpmTasks "grunt-contrib-copy"
 
-  grunt.registerTask "default", ["concat"]
+  grunt.registerTask "default", ["copy"]
