@@ -1,5 +1,8 @@
 ## History
 
+- v2.0.3 November 9th, 2013
+  - Cleaned up source
+
 - v2.0.2 November 8th, 2013
   - Travis tests
 

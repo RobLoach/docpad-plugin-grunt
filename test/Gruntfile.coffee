@@ -1,3 +1,4 @@
+# Export Grunt configruation
 module.exports = (grunt) ->
 
   grunt.initConfig

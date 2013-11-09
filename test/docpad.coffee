@@ -1,3 +1,4 @@
+# Test DocPad exports
 module.exports = {
   templateData:
     site:
