@@ -2,6 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/RobLoach/docpad-plugin-grunt.png?branch=master)](http://travis-ci.org/RobLoach/docpad-plugin-grunt "Check this project's build status on TravisCI")
 [![NPM version](https://badge.fury.io/js/docpad-plugin-grunt.png)](http://badge.fury.io/js/docpad-plugin-grunt "View this project on NPM")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/RobLoach/docpad-plugin-grunt/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Run [Grunt](http://gruntjs.com) tasks when building with [DocPad](https://docpad.org).
 
