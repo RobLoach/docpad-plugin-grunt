@@ -10,8 +10,11 @@ Run [Grunt](http://gruntjs.com) tasks when building with [DocPad](https://docpad
 ## Install
 
 ```bash
-$ docpad install grunt
+$ npm install --save docpad-plugin-grunt grunt-cli
 ```
+
+It is required to have `grunt-cli` in *package.json* so that Grunt's command
+line interface binary is available to your application.
 
 
 ## Configure
