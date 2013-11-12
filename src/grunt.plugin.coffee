@@ -28,12 +28,11 @@ module.exports = (BasePlugin) ->
       config = @getConfig()
       rootPath = @docpad.getConfig().rootPath
       gruntPath = @path.join(rootPath, 'node_modules', '.bin', 'grunt')
-      tasks = [gruntPath]
-      for task in config.gruntTasks or []
-        tasks.push task
+      command = [gruntPath]
+      command.push task for task in config.gruntTasks or []
 
       # Execute
-      @safeps.spawn(tasks, {cwd: rootPath, output: true}, next)
+      @safeps.spawn(command, {cwd: rootPath, output: true}, next)
 
       # Chain
       @
