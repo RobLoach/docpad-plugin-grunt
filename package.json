@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "grunt-cli": "~0.1.10",
-    "safeps": "~2.2.8"
+    "safeps": "~2.2.8",
+    "glob": "~3.2.7"
   },
   "devDependencies": {
     "coffee-script": "~1.6.2",

@@ -5,7 +5,9 @@
   "private": true,
   "dependencies": {
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-concat": "~0.3.0"
+  },
+  "devDependencies": {
     "grunt-cli": "~0.1.10"
   }
 }
