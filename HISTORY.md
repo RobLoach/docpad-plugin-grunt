@@ -1,6 +1,6 @@
 ## History
 
-- v2.0.4 November 19th, 2013
+- v2.0.4 November 22nd, 2013
   - Updated documentation
   - Use glob() to find Grunt
 

@@ -36,11 +36,11 @@ The following will run the `"cssmin"` and `"uglify"` tasks from Grunt:
 
 
 ## History
-[You can discover the history inside the `History.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/History.md#files)
+[You can discover the history inside the `HISTORY.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/HISTORY.md#files)
 
 
 ## Contributing
-[You can discover the contributing instructions inside the `Contributing.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/Contributing.md#files)
+[You can discover the contributing instructions inside the `CONTRIBUTING.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
 
 
 ## License
