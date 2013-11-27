@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-grunt",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Run Grunt tasks when building with DocPad.",
   "license": "MIT",
   "homepage": "http://github.com/robloach/docpad-plugin-grunt",
@@ -28,6 +28,7 @@
     "docpad": "6.x"
   },
   "dependencies": {
+    "grunt": "~0.4.2",
     "grunt-cli": "~0.1.10",
     "safeps": "~2.2.8",
     "glob": "~3.2.7"
@@ -41,6 +42,7 @@
   },
   "main": "./out/grunt.plugin.js",
   "scripts": {
+    "preinstall": "node ./cyclic.js",
     "test": "node ./out/grunt.test.js"
   }
 }
