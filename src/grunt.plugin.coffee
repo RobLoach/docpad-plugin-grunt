@@ -13,6 +13,8 @@ module.exports = (BasePlugin) ->
       renderAfter: false
       generateBefore: false
       generateAfter: false
+      populateCollectionsBefore: false
+      populateCollections: false
 
     # Constructor
     constructor: ->
@@ -64,6 +66,20 @@ module.exports = (BasePlugin) ->
 
     generateAfter: (opts, next) ->
       if tasks = @getConfig().generateAfter or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    populateCollectionsBefore: (opts, next) ->
+      if tasks = @getConfig().populateCollectionsBefore or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    populateCollections: (opts, next) ->
+      if tasks = @getConfig().populateCollections or false
         @processGrunt(tasks, opts, next)
       else
         return next()

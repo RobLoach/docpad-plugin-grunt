@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.1 December 6th, 2013
+  - Added the populateCollections event
+
 - v2.1.0 December 6th, 2013
   - Added dynamic event handling
 
