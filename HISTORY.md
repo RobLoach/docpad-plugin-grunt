@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.0 December 6th, 2013
+  - Added dynamic event handling
+
 - v2.0.5 November 26th, 2013
   - Added `grunt` to the dependency list
 

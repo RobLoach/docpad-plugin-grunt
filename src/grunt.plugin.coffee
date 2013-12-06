@@ -7,7 +7,12 @@ module.exports = (BasePlugin) ->
 
     # Configuration
     config:
-      gruntTasks: []
+      writeAfter: []
+      writeBefore: false
+      renderBefore: false
+      renderAfter: false
+      generateBefore: false
+      generateAfter: false
 
     # Constructor
     constructor: ->
@@ -22,10 +27,51 @@ module.exports = (BasePlugin) ->
       # Chain
       @
 
-    # Write After
+    writeBefore: (opts, next) ->
+      if tasks = @getConfig().writeBefore or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
     writeAfter: (opts, next) ->
+      if tasks = @getConfig().writeAfter or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    renderBefore: (opts, next) ->
+      if tasks = @getConfig().renderBefore or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    renderAfter: (opts, next) ->
+      if tasks = @getConfig().renderAfter or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    generateBefore: (opts, next) ->
+      if tasks = @getConfig().generateBefore or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    generateAfter: (opts, next) ->
+      if tasks = @getConfig().generateAfter or false
+        @processGrunt(tasks, opts, next)
+      else
+        return next()
+      @
+
+    # Process the Grunt tasks.
+    processGrunt: (tasks, opts, next) ->
       # Prepare
-      config = @getConfig()
       rootPath = @docpad.getConfig().rootPath
 
       # Find the Grunt path
@@ -37,7 +83,7 @@ module.exports = (BasePlugin) ->
       if gruntPath = files[0] or false
         # Construct the command line arguments for Grunt
         command = [@path.join rootPath, gruntPath]
-        command.push task for task in config.gruntTasks or []
+        command.push task for task in tasks or []
 
         # Execute
         @safeps.spawn(command, {cwd: rootPath, output: true}, next)

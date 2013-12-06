@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-grunt",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "Run Grunt tasks when building with DocPad.",
   "license": "MIT",
   "homepage": "http://github.com/robloach/docpad-plugin-grunt",

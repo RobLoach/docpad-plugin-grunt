@@ -16,22 +16,30 @@ $ docpad install grunt
 
 ## Configure
 
-By default, the plugin will run the `default` tasks associated with Grunt when
-building with DocPad. This is equivilant to adding the following configuration
-to your [DocPad configuration file](http://docpad.org/docs/config):
+By default, the plugin will run the `default` tasks associated with Grunt during
+the [writeAfter](http://docpad.org/docs/events#writeafter) event with DocPad.
+This is equivilant to adding the following configuration to your [DocPad
+configuration file](http://docpad.org/docs/config):
 
 ```coffeescript
   plugins:
     grunt:
-      gruntTasks: []
+      writeAfter: []
+      writeBefore: false
+      renderBefore: false
+      renderAfter: false
+      generateBefore: false
+      generateAfter: false
 ```
 
-The following will run the `"cssmin"` and `"uglify"` tasks from Grunt:
+The following will run the `"cssmin"` and `"uglify"` tasks from Grunt during the
+[generateAfter](http://docpad.org/docs/events#generateafter) event:
 
 ```coffeescript
   plugins:
     grunt:
-      gruntTasks: ["cssmin", "uglify"]
+      writeAfter: false
+      generateAfter: ["cssmin", "uglify"]
 ```
 
 

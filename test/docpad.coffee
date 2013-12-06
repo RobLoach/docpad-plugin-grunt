@@ -7,5 +7,5 @@ module.exports = {
   plugins:
     # By default, it uses "concat", but we will use "copy" instead.
     grunt:
-      gruntTasks: ["copy"]
+      writeAfter: ["copy"]
 }

@@ -9,6 +9,4 @@ node_js:
 notifications:
   irc:
     - "irc.freenode.org#bevry-dev"
-  email:
-    recipients:
-      - travisci@bevry.me
+  email: false
