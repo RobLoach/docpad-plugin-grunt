@@ -1,3 +1,5 @@
+_ = require('underscore')
+
 # Export Plugin
 module.exports = (BasePlugin) ->
   # Define Plugin
@@ -16,8 +18,23 @@ module.exports = (BasePlugin) ->
       populateCollectionsBefore: false
       populateCollections: false
 
+    createEventHandlers: (docpad) ->
+      events = docpad.getEvents()
+      _.each events, (eventName) =>
+        @[eventName] = (opts, next) =>
+          if tasks = @getConfig()[eventName] or false
+            @processGrunt(tasks, opts, next)
+          else
+            return next()
+          @
+    @
+
     # Constructor
-    constructor: ->
+    constructor: (opts)->
+      # create eventHandlers
+      {docpad} = opts
+      @createEventHandlers(docpad)
+
       # Prepare
       super
 
@@ -27,62 +44,6 @@ module.exports = (BasePlugin) ->
       @glob = require('glob')
 
       # Chain
-      @
-
-    writeBefore: (opts, next) ->
-      if tasks = @getConfig().writeBefore or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    writeAfter: (opts, next) ->
-      if tasks = @getConfig().writeAfter or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    renderBefore: (opts, next) ->
-      if tasks = @getConfig().renderBefore or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    renderAfter: (opts, next) ->
-      if tasks = @getConfig().renderAfter or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    generateBefore: (opts, next) ->
-      if tasks = @getConfig().generateBefore or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    generateAfter: (opts, next) ->
-      if tasks = @getConfig().generateAfter or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    populateCollectionsBefore: (opts, next) ->
-      if tasks = @getConfig().populateCollectionsBefore or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
-      @
-
-    populateCollections: (opts, next) ->
-      if tasks = @getConfig().populateCollections or false
-        @processGrunt(tasks, opts, next)
-      else
-        return next()
       @
 
     # Process the Grunt tasks.
