@@ -1,5 +1,3 @@
-_ = require('underscore')
-
 # Export Plugin
 module.exports = (BasePlugin) ->
   # Define Plugin
@@ -26,7 +24,7 @@ module.exports = (BasePlugin) ->
           else
             return next()
           @
-    @
+      @
 
     # Constructor
     constructor: (opts)->
