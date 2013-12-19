@@ -1,5 +1,9 @@
 ## History
 
+- v2.1.2 December 19th, 2013
+  - Handles all DocPad events - [@evantill](http://github.com/evantill)
+  - Updated documentation
+
 - v2.1.1 December 6th, 2013
   - Added the populateCollections event
 

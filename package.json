@@ -9,12 +9,19 @@
     "docpad-plugin",
     "grunt"
   ],
+  "badges": {
+    "travis": true,
+    "npm": true,
+    "gittip": "RobLoach",
+    "flattr": "2257574/RobLoach"
+  },
   "author": "Rob Loach (http://robloach.net)",
   "maintainers": [
     "Rob Loach (http://robloach.net)"
   ],
   "contributors": [
-    "Rob Loach (http://robloach.net)"
+    "Rob Loach (http://robloach.net)",
+    "Eric Vantillard (https://github.com/evantill)"
   ],
   "bugs": {
     "url": "http://github.com/robloach/docpad-plugin-grunt/issues"
@@ -24,7 +31,7 @@
     "url": "https://github.com/RobLoach/docpad-plugin-grunt.git"
   },
   "engines": {
-    "node": ">=0.10",
+    "node": ">=0.4",
     "docpad": "6.x"
   },
   "dependencies": {

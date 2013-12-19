@@ -8,13 +8,6 @@ module.exports = (BasePlugin) ->
     # Configuration
     config:
       writeAfter: []
-      writeBefore: false
-      renderBefore: false
-      renderAfter: false
-      generateBefore: false
-      generateAfter: false
-      populateCollectionsBefore: false
-      populateCollections: false
 
     createEventHandlers: (docpad) ->
       for eventName in docpad.getEvents()
