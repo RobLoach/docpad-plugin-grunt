@@ -19,8 +19,7 @@ module.exports = (BasePlugin) ->
       populateCollections: false
 
     createEventHandlers: (docpad) ->
-      events = docpad.getEvents()
-      _.each events, (eventName) =>
+      for eventName in docpad.getEvents()
         @[eventName] = (opts, next) =>
           if tasks = @getConfig()[eventName] or false
             @processGrunt(tasks, opts, next)
