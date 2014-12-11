@@ -35,21 +35,28 @@
     "docpad": "6.x"
   },
   "dependencies": {
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.10",
-    "safeps": "~2.2.8",
-    "glob": "~3.2.7"
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "safeps": "~2.2.12",
+    "glob": "~4.3.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.2",
+    "coffee-script": "~1.8.0",
     "docpad": ">=6.37 <7",
-    "joe": "~1.3.2",
+    "joe": "~1.5.0",
     "joe-reporter-console": "~1.2.1",
-    "chai": "~1.8.1"
+    "chai": "~1.10.0"
   },
   "main": "./out/grunt.plugin.js",
+  "directories": {
+    "lib": "./out/lib"
+  },
   "scripts": {
     "preinstall": "node ./cyclic.js",
     "test": "node ./out/grunt.test.js"
+  },
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src",
+    "BISCOTTO_SRC_PATH": "src"
   }
 }
