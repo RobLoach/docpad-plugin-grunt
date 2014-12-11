@@ -49,7 +49,7 @@ module.exports = (BasePlugin) ->
       # Check whether or not the file was found
       if gruntPath = files[0] or false
         # Construct the command line arguments for Grunt
-        command = [@path.join rootPath, gruntPath]
+        command = ['node', @path.join rootPath, gruntPath]
         command.push task for task in tasks or []
 
         # Execute
