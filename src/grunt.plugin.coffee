@@ -8,6 +8,7 @@ module.exports = (BasePlugin) ->
     # Configuration
     config:
       writeAfter: []
+      warnOnError: false
 
     createEventHandlers: (docpad) ->
       for eventName in docpad.getEvents()
@@ -39,6 +40,8 @@ module.exports = (BasePlugin) ->
     # Process the Grunt tasks.
     processGrunt: (tasks, opts, next) ->
       # Prepare
+      docpad = @docpad
+      config = @getConfig()
       rootPath = @docpad.getConfig().rootPath
 
       # Find the Grunt path
@@ -53,11 +56,17 @@ module.exports = (BasePlugin) ->
         command.push task for task in tasks or []
 
         # Execute
-        @safeps.spawn(command, {cwd: rootPath, output: true}, next)
+        @safeps.spawn command, {cwd: rootPath, output: true}, (err) ->
+          if err
+            if config.warnOnError
+              docpad.log "warn", "Grunt Error: " + err.message
+            else
+              return next(err)
+          return next()
 
       else
         err = new Error('Could not find the Grunt command line interface.')
-        return next(err); err
+        return next(err)
 
       # Chain
       @
