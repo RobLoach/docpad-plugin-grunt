@@ -39,6 +39,7 @@ module.exports = (BasePlugin) ->
     # Process the Grunt tasks.
     processGrunt: (tasks, opts, next) ->
       # Prepare
+      docpad = @docpad
       rootPath = @docpad.getConfig().rootPath
 
       # Find the Grunt path
@@ -53,7 +54,9 @@ module.exports = (BasePlugin) ->
         command.push task for task in tasks or []
 
         # Execute
-        @safeps.spawn(command, {cwd: rootPath, output: true}, next)
+        @safeps.spawn command, {cwd: rootPath, output: true}, (err) ->
+          docpad.log "warn", "Grunt Error: " + err.message  if err
+          next()
 
       else
         err = new Error('Could not find the Grunt command line interface.')
