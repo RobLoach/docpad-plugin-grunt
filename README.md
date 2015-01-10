@@ -43,7 +43,14 @@ The following will run the `"cssmin"` and `"uglify"` tasks from Grunt during the
       writeAfter: false
       generateAfter: ["cssmin", "uglify"]
 ```
+The following can be used if you want the default tasks to run but just show
+a warning if the Gruntfile fails and continue running.
 
+```coffeescript
+  plugins:
+    grunt:
+      warnOnError: true
+```
 
 <!-- HISTORY/ -->
 
@@ -77,6 +84,7 @@ These amazing people have contributed code to this project:
 
 - Rob Loach (https://github.com/robloach) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=RobLoach)
 - Eric Vantillard (https://github.com/evantill) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=evantill)
+- Jeff Turner (https://github.com/jtwebman) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=jtwebman)
 
 [Become a contributor!](https://github.com/robloach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
 

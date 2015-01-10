@@ -1,5 +1,9 @@
 ## History
 
+- v2.1.3 January 10th, 2015
+  - Added warnOnError to config - [@jtwebman](http://github.com/jtwebman)
+  - Updated documentation
+
 - v2.1.2 December 19th, 2013
   - Handles all DocPad events - [@evantill](http://github.com/evantill)
   - Updated documentation
