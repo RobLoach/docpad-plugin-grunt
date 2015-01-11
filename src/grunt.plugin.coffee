@@ -7,11 +7,11 @@ module.exports = (BasePlugin) ->
 
     # Configuration
     config:
-      writeAfter: []
       warnOnError: false
 
     createEventHandlers: (docpad) ->
-      for eventName in docpad.getEvents()
+      # Retain the local scope to allow manipulation of DocPad events
+      docpad.getEvents().forEach (eventName) =>
         @[eventName] = (opts, next) =>
           if tasks = @getConfig()[eventName] or false
             @processGrunt(tasks, opts, next)
