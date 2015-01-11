@@ -12,8 +12,9 @@
   "badges": {
     "travis": true,
     "npm": true,
-    "gittip": "RobLoach",
-    "flattr": "2257574/RobLoach"
+    "npmdownloads": true,
+    "david": true,
+    "daviddev": true
   },
   "author": "Rob Loach (http://robloach.net)",
   "maintainers": [
@@ -36,10 +37,10 @@
     "docpad": "6.x"
   },
   "dependencies": {
+    "glob": "~4.3.2",
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",
-    "safeps": "~2.2.12",
-    "glob": "~4.3.1"
+    "safeps": "~2.2.12"
   },
   "devDependencies": {
     "coffee-script": "~1.8.0",
@@ -53,7 +54,6 @@
     "lib": "./out/lib"
   },
   "scripts": {
-    "preinstall": "node ./cyclic.js",
     "test": "node ./out/grunt.test.js"
   },
   "cakeConfiguration": {
