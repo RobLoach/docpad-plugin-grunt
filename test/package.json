@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "grunt-cli": "~0.1.10"
-  }
+  },
+  "license": "MIT"
 }
