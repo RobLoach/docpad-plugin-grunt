@@ -2,11 +2,12 @@
 
 <!-- BADGES/ -->
 
-[![Build Status](https://secure.travis-ci.org/RobLoach/docpad-plugin-grunt.png?branch=master)](http://travis-ci.org/RobLoach/docpad-plugin-grunt "Check this project's build status on TravisCI")
-[![NPM version](https://badge.fury.io/js/docpad-plugin-grunt.png)](http://badge.fury.io/js/docpad-plugin-grunt "View this project on NPM")
-[![Gittip button](http://img.shields.io/gittip/RobLoach.png)](https://www.gittip.com/RobLoach/ "Support this project using Gittip")
-[![Flattr button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/2257574/RobLoach "Support this project using Flattr")
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/RobLoach/docpad-plugin-grunt/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://img.shields.io/travis/RobLoach/docpad-plugin-grunt/master.svg)](http://travis-ci.org/RobLoach/docpad-plugin-grunt "Check this project's build status on TravisCI")
+[![NPM version](https://img.shields.io/npm/v/docpad-plugin-grunt.svg)](https://npmjs.org/package/docpad-plugin-grunt "View this project on NPM")
+[![NPM downloads](https://img.shields.io/npm/dm/docpad-plugin-grunt.svg)](https://npmjs.org/package/docpad-plugin-grunt "View this project on NPM")
+[![Dependency Status](https://img.shields.io/david/RobLoach/docpad-plugin-grunt.svg)](https://david-dm.org/RobLoach/docpad-plugin-grunt)
+[![Dev Dependency Status](https://img.shields.io/david/dev/RobLoach/docpad-plugin-grunt.svg)](https://david-dm.org/RobLoach/docpad-plugin-grunt#info=devDependencies)<br/>
+
 
 <!-- /BADGES -->
 
@@ -55,15 +56,16 @@ a warning if the Gruntfile fails and continue running.
 <!-- HISTORY/ -->
 
 ## History
-[You can discover the history inside the `HISTORY.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/HISTORY.md#files)
+[Discover the change history by heading on over to the `HISTORY.md` file.](https://github.com/RobLoach/docpad-plugin-grunt/blob/master/HISTORY.md#files)
 
 <!-- /HISTORY -->
 
 
 <!-- CONTRIBUTE/ -->
 
-## Contributing
-[You can discover the contributing instructions inside the `CONTRIBUTING.md` file](https://github.com/robloach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
+## Contribute
+
+[Discover how you can contribute by heading on over to the `CONTRIBUTING.md` file.](https://github.com/RobLoach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
 
 <!-- /CONTRIBUTE -->
 
@@ -76,17 +78,24 @@ a warning if the Gruntfile fails and continue running.
 
 These amazing people are maintaining this project:
 
-- Rob Loach (https://github.com/robloach)
+- Rob Loach (http://robloach.net)
+
+### Sponsors
+
+No sponsors yet! Will you be the first?
+
+
 
 ### Contributors
 
 These amazing people have contributed code to this project:
 
-- Rob Loach (https://github.com/robloach) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=RobLoach)
-- Eric Vantillard (https://github.com/evantill) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=evantill)
-- Jeff Turner (https://github.com/jtwebman) - [view contributions](https://github.com/robloach/docpad-plugin-grunt/commits?author=jtwebman)
+- [Eric Vantillard](https://github.com/evantill) — [view contributions](https://github.com/RobLoach/docpad-plugin-grunt/commits?author=evantill)
+- [interpaul](https://github.com/interpaul) — [view contributions](https://github.com/RobLoach/docpad-plugin-grunt/commits?author=interpaul)
+- [Jeff Turner](https://github.com/jtwebman) — [view contributions](https://github.com/RobLoach/docpad-plugin-grunt/commits?author=jtwebman)
+- [RobLoach](https://github.com/RobLoach) — [view contributions](https://github.com/RobLoach/docpad-plugin-grunt/commits?author=RobLoach)
 
-[Become a contributor!](https://github.com/robloach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
+[Become a contributor!](https://github.com/RobLoach/docpad-plugin-grunt/blob/master/CONTRIBUTING.md#files)
 
 <!-- /BACKERS -->
 
@@ -94,8 +103,15 @@ These amazing people have contributed code to this project:
 <!-- LICENSE/ -->
 
 ## License
-Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
 
-Copyright &copy; 2013 [Rob Loach](http://robloach.net)
+Unless stated otherwise all works are:
+
+- Copyright &copy; Rob Loach (http://robloach.net)
+
+and licensed under:
+
+- The incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://opensource.org/licenses/mit-license.php)
 
 <!-- /LICENSE -->
+
+
