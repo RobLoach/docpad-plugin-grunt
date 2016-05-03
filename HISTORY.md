@@ -1,5 +1,8 @@
 ## History
 
+- v2.2.1 May 2nd, 2016
+	- Fixed `license` in [`package.json`](package.json)
+
 - v2.2.0 August 17th, 2015
 	- Updated dependencies
 
